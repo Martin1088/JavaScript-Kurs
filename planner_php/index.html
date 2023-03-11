@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" 
+         integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" 
+         crossorigin="anonymous">
+    </script>
+    <script src="planner.js"></script>
+    <title>Haushaltsbuch</title>
+</head>
+<body>
+    <form action="planner.php" method="get">
+        <label for="title">Titel: </label>
+        <input type="text" id="title" name="title"><br>
+        <label for="typ">Einnahme oder Ausgabe: </label>
+        <input type="radio" name="typ" title="Ausgabe" value="Ausgabe">
+        <input type="radio" name="typ" title="Einnahme"  value="Einnahme" checked>
+        <label for="amount">Betrag: </label>
+        <input type="number" id="amount" name="amount"><br>
+        <label for="date">datum: </label>
+        <input type="text" id="date" name="date"><br>
+        <input type="submit" name="submit" id="submit"" value="submit">
+    </form>
+    <br>
+    <div id="result">
+        <div id="balance">Aktueller Kontostand: </div>
+    </div>
+    <section id="monthslist">
+        <article class="list">
+            <ul class="income">
+            </ul>
+            <ul class="outcome">
+            </ul>
+        </article>
+    </section>
+
+    
+</body>
+</html>
